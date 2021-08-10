@@ -8,8 +8,6 @@ import (
 	"os"
 	"regexp"
 	"strings"
-
-	"github.com/grazianobolla/wildermyth-translator/translator"
 )
 
 var code_regex, _ = regexp.Compile(`\<.*?\>`)
@@ -65,10 +63,11 @@ func parse_line(line string) string {
 }
 
 func translate_text(text string) string {
-	str, err := translator.Translate(text, "en", "es")
-	if err != nil {
-		log.Fatal(err)
-	}
+	// str, err := translator_client.Translate([]string{"AMAZING"}, deepl.English, deepl.Spanish)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 
-	return str
+	// fmt.Println(str)
+	return "translated_text"
 }
